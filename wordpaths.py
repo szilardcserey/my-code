@@ -1,3 +1,13 @@
+###############################################################################
+# author: Szilard Cserey
+# email:  szilard.cserey@gmail.com
+# This application takes as input the path to a dictionary file
+# /usr/share/dict/words, a start word and an end word and print out at least
+# one path from start to end or indicates if there is no possible path
+#
+# python wordpaths.py /usr/share/dict/words cool fund
+###############################################################################
+
 import copy
 import random
 import sys
@@ -88,10 +98,12 @@ class WordPaths:
             else:
                 unsuccess = 0
 
+            '''
             if unsuccess == self.inner_loop_limit:
                 counter -= self.inner_loop_limit
                 self._chain = [self.start_word]
                 self.fill_pos_char_list()
+            '''
         return end_word_reached
 
     @property
